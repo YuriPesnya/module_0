@@ -1,16 +1,18 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+import numpy as np
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+count = 0  # счетчик попыток
+number = np.random.randint(1, 101)  # загадали число
+print("Загадано число от 1 до 100")
 
+while True:  # бесконечный цикл
+    predict = int(input())  # предполагаемое число
+    count += 1  # плюсуем попытку
+    if number == predict:
+        break  # выход из цикла, если угадали
+    elif number > predict:
+        print(f"Угадываемое число больше {predict} ")
+    elif number < predict:
+        print(f"Угадываемое число меньше {predict} ")
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(f"Вы угадали число {number} за {count} попыток.")
