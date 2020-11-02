@@ -13,10 +13,10 @@ def game_core_v3(number):
         count+=1
         if number > predict:
             min_number = predict # устванавлмваем новую нижнюю границу поиска
-            predict = ( max_number - predict ) // 2 + predict # следуююее предположение  - середина нового диапазона
+            predict = (max_number - predict)//2 + predict # следуююее предположение  - середина нового диапазона
         elif number < predict:
             max_number = predict # устванавлмваем новую верхнюю границу поиска
-            predict = ( predict -  min_number) // 2 + min_number # следуююее предположение  - середина нового диапазона
+            predict = (predict -  min_number)//2 + min_number # следуююее предположение  - середина нового диапазона
     return(count) # выход из цикла, если угадали
 
 
